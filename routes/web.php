@@ -25,4 +25,4 @@ Route::get('/karya/edit/{id}', [karyaController::class, 'edit']);
 Route::put('/karya/update/{id}', [karyaController::class, 'update']);
 Route::get('/karya/hapus/{id}', [karyaController::class, 'delete']);
 Route::get('/karya/destroy/{id}', [karyaController::class, 'destroy']);
-
+Route::get('/karya/cetak', [karyaController::class, 'cetak']);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\karya;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class karyaController extends Controller
@@ -124,4 +125,13 @@ class karyaController extends Controller
         return redirect('/karya');
 
     }
+
+    public function cetak()
+    {
+        $karya = karya::all();
+        $pdf = Pdf::loadview('karya.karya-cetak', compact('karya'));
+        return $pdf->download('laporan-transaksi.pdf');
+    }
+
 }
+

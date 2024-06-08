@@ -9,6 +9,9 @@ Karya | Heart Admin
 <button type="button" class="btn btn-tambah">
   <a href="/karya/tambah">Tambah Data</a>
 </button>
+<button type="button" class="btn btn-tambah">
+  <a href="/karya/cetak">Cetak</a>
+</button>
 <table class="table-data">
   <thead>
     <tr>
